@@ -1,3 +1,0 @@
-This is a sample input in the file.
-
-Added a new line.

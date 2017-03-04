@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pop ups</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function removeTestCase() {
+            alert('Yo, this is your first alert');
+        }
+
+    </script>
+    <script type="text/javascript"></script>
+    <div>
+        <form method="post">
+            <table>
+                <tr>
+                    <td><input name="TestCase" type="radio" value="TC1" checked="checked"></td>
+                    <td><label id="LTC1">Test case 1</label></td>
+                </tr>
+                <tr>
+                    <td><input name="TestCase" type="radio" value="TC2"></td>
+                    <td><label id="LTC2">Test case 2</label></td>
+                </tr>
+                <tr>
+                    <td><input name="TestCase" type="radio" value="TC1"></td>
+                    <td><label id="LTC3">Test case 3</label></td>
+                </tr>
+                <tr>
+                    <td><input name="TestCase" type="radio" value="TC1"></td>
+                    <td><label id="LTC4">Test case 4</label></td>
+                </tr>
+                <tr>
+                    <td><input name="remove_btn" type="button" value="Remove" onclick="removeTestCase()"></td>
+                    <td><input name="cancel_btn" type="button" value="Cancel" onclick="dontDelete()"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

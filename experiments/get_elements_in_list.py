@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 def test_get_elements_in_list():
     driver = webdriver.Chrome()
     driver.maximize_window()
-    driver.get('https://blevmpve01.sthlm.projectplace.com/planview/')
+    driver.get('')
     time.sleep(5)
 
     _dsn = driver.find_element(By.NAME, 'DSN')
@@ -19,9 +19,9 @@ def test_get_elements_in_list():
     _password = driver.find_element(By.ID, 'UserPass')
     _sign_in = driver.find_element(By.ID, 'btnLogin')
 
-    Select(_dsn).select_by_visible_text('ppint_gaurav')
-    _user_name.send_keys('pvmaster')
-    _password.send_keys('ip')
+    Select(_dsn).select_by_visible_text('')
+    _user_name.send_keys('')
+    _password.send_keys('')
     _sign_in.click()
     Alert(driver).accept()
 

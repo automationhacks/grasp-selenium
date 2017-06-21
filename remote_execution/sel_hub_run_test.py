@@ -16,9 +16,9 @@ class SelHubTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.chrome = webdriver.Remote(command_executor='http://localhost:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME)
+        cls.chrome = webdriver.Remote(command_executor='http://localhost:4444/wd/hub', desired_capabilities=DesiredCapabilities.CHROME.copy())
         # cls.firefox = webdriver.Remote(command_executor='http://localhost:4444/wd/hub', desired_capabilities=DesiredCapabilities.FIREFOX)
-        cls.ie = webdriver.Remote(command_executor='http://localhost:4444/wd/hub', desired_capabilities=DesiredCapabilities.INTERNETEXPLORER)
+        cls.ie = webdriver.Remote(command_executor='http://localhost:4444/wd/hub', desired_capabilities=DesiredCapabilities.INTERNETEXPLORER.copy())
 
     def test_chrome(self):
         self.chrome.maximize_window()

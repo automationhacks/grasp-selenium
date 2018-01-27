@@ -39,12 +39,12 @@ def setup_chrome_options(proxy):
 
 
 def login_to_app(driver, proxy):
-    proxy.new_har('')
-    driver.get('')
+    proxy.new_har('planview')
+    driver.get('http://blevmpve03/planview/login/body.asp')
 
-    Select(driver.find_element(By.NAME, 'DSN')).select_by_visible_text(' ')
-    driver.find_element(By.ID, 'Username').send_keys('')
-    driver.find_element(By.ID, 'UserPass').send_keys('')
+    Select(driver.find_element(By.NAME, 'DSN')).select_by_visible_text('ui_gaurav_pve14')
+    driver.find_element(By.ID, 'Username').send_keys('pvmaster')
+    driver.find_element(By.ID, 'UserPass').send_keys('ip')
     driver.find_element(By.ID, 'btnLogin').click()
 
     har = proxy.har
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     proxy = start_remote_proxy()
     driver = setup_chrome_options(proxy)
     har = login_to_app(driver, proxy)
-    endpoint_url = ''
+    endpoint_url = 'http://blevmpve03/planview/services/VisualServiceJson.svc/GetNewSharedVisualsForLocation?pt=HOMEVIEW'
     print(wait_for_endpoint(endpoint_url, proxy))
     teardown_driver(driver)
     shutdown_remote_proxy(proxy)
